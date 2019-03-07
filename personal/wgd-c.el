@@ -59,13 +59,31 @@
 
 ;; Hooks for CLang
 (require 'clang-format)
-;; (setq exec-path (append exec-path '("/usr/local/bin/clang-format")))
-;; (global-set-key [C-M-tab] 'clang-format-region)
+(setq exec-path (append exec-path '("/usr/local/bin/clang-format")))
+(global-set-key [C-M-tab] 'clang-format-region)
 ;; 
 ;; (require 'clang-format)
-(global-set-key (kbd "C-c i") 'clang-format-region)
-(global-set-key (kbd "C-c u") 'clang-format-buffer)
-
+;; (global-set-key (kbd "C-c i") 'clang-format-region)
+;; (global-set-key (kbd "C-c u") 'clang-format-buffer)
 (setq clang-format-style-option "llvm")
+
+;; Hide/unhide functions
+;; https://github.com/bbatsov/prelude/issues/786
+(add-hook 'prog-mode-hook 'hs-minor-mode)
+;; (defun hide-level-1 ()
+  ;; (interactive)
+  ;; (hs-hide-level 1))
+;; 
+;; (defun hide-level-2 ()
+  ;; (interactive)
+  ;; (hs-hide-level 2))
+;; 
+;; (defun hide-level-3 ()
+  ;; (interactive)
+  ;; (hs-hide-level 3))
+;; 
+;; (evil-leader/set-key "f1" 'hide-level-1)
+;; (evil-leader/set-key "f2" 'hide-level-2)
+;; (evil-leader/set-key "f3" 'hide-level-3)
 
 ;;; prelude-c.el ends here
