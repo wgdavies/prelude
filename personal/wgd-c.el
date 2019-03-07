@@ -87,3 +87,22 @@
 ;; (evil-leader/set-key "f3" 'hide-level-3)
 
 ;;; prelude-c.el ends here
+
+;;; Google CPP Lint
+(add-to-list 'load-path "~/.emacs.d/personal/flymake-google-cpplint.el")
+(require 'flymake-google-cpplint)
+;; Not sure for C++ anymore (?)
+; (add-hook 'c++-mode-hook 'flymake-google-cpplint-load)
+(add-hook 'c-mode-hook 'flymake-google-cpplint-load)
+;; See options in /usr/local/bin/cpplint.py
+; (custom-set-variables
+;  '(flymake-google-cpplint-verbose "3")
+;  '(flymake-google-cpplint-linelength "120")
+;  ...
+;  )
+(custom-set-variables
+ '(flymake-google-cpplint-command "/usr/local/bin/cpplint.py"))
+;; Uncomment the following to use 'tmpdir rather than 'inplace
+; (custom-set-variables
+;  '(flymake-google-cpplint-location 'tempdir))
+
