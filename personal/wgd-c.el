@@ -89,6 +89,7 @@
 ;;; prelude-c.el ends here
 
 ;;; Google CPP Lint
+;;; C.f: https://github.com/flycheck/flycheck-google-cpplint
 (add-to-list 'load-path "~/.emacs.d/personal/flymake-google-cpplint.el")
 (require 'flymake-google-cpplint)
 ;; Not sure for C++ anymore (?)
