@@ -9,7 +9,7 @@
 ;; (setq column-number-mode t)
 (desktop-save-mode 1)
 (setq desktop-restore-frames t)
-(require 'magit-todos)
+;(require 'magit-todos)
 
 ;; Sorry, I'm just not cool enough for Guru Mode :P
 (setq prelude-guru nil)

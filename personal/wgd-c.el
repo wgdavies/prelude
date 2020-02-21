@@ -58,7 +58,7 @@
 (provide 'prelude-c)
 
 ;; Hooks for CLang
-(require 'clang-format)
+;(require 'clang-format)
 (setq exec-path (append exec-path '("/usr/bin/clang-format")))
 (global-set-key [C-M-tab] 'clang-format-region)
 ;; 
