@@ -2,4 +2,4 @@
 ;; (require 'doxymacs)
 ;; (add-hook 'c-mode-common-hook'doxymacs-mode)
 
-(highlight-doxygen-global-mode 1)
+;;(highlight-doxygen-global-mode 1)
