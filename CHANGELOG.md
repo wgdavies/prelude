@@ -4,20 +4,41 @@
 
 ### New features
 
+* Enable `org-habits`.
+* Neatly track `TODO` state changes in a drawer (LOGBOOK), thereby improving readability.
+* Add a module to enable Literate Programming (`prelude-literal-programming.el`).
 * Add a Racket module.
 * Add a Lua module.
 * Auto-install `racket-mode` if needed.
 * Add a F# module.
+* Auto-install `use-package`.
+* Add `prelude-vertico` module. Vertico a simpler alternative to `ivy-mode` and supersedes Selectrum.
+* [#1421](https://github.com/bbatsov/prelude/issues/1421): Make it possible to configure the TypeScript format action using `prelude-ts-format-action`.
+* [#1354](https://github.com/bbatsov/prelude/issues/1354): Remove default `C--` and `C-+` keybindings to increase/decrease the font size.
 
 ### Changes
 
 * Bind all essential `avy` commands to their recommended keybindings.
 * Remove `company-lsp`.
 * Replace `yank-pop` key-binding to `counse-yank-pop` for `ivy-mode`.
+* The keybinding for `proced` is now enabled unconditionally.
+* Replace prelude-go backend with `lsp` instead of unmaintained tools.
+* Use `rust-analyzer` as language server for prelude-rust and provide nicer syntax highlighting with `tree-sitter`.
+* Use `js2-mode` for Node.js specific `.cjs` and `.mjs` extensions.
+* Add `prelude-undo-tree` custom variable: allows user disable
+  undo-tree integration. Enabled by default to maintain backward-compatibility.
 
 ### Bugs fixed
 
 * Fix `company` still being visible in the mode line.
+* [#1335](https://github.com/bbatsov/prelude/issues/1335): Workaround
+  for `which-key` bug causing display issues in clients to `emacs --daemon`.
+* Fix **Edit on GitHub** link in ReadTheDocs site.
+* Fix fall back to sample `prelude-modules.el` not working if user has installed to non-default location.
+* Stop requiring `helm-config` since upstream has removed the module.
+* Require `typescript-mode` using `prelude-require-packages` to avoid error upon inclusion in `personal/prelude-modules.el`.
+* Turn off `super-save` in `rust-mode` to prevent severe hangs during autocomplete.
+* Update `prelude-dart.el` to use `lsp-dart-dap-setup` instead of deprecated `dap-dart-setup` function.
 
 ## 1.1.0 (2021-02-14)
 
